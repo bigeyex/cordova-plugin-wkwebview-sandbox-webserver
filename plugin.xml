@@ -21,7 +21,7 @@
     <name>CordovaWKWebviewSandboxWebserver</name>
     <description>Cordova Wkwebview Sandbox Webserver Plugin</description>
     <keywords>cordova,local web server,sandbox,wkwebview</keywords>
-    <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugins.git#local-webserver</repo>
+    <repo>git+https://github.com/bigeyex/cordova-plugin-wkwebview-sandbox-webserver.git</repo>
 
     <engines>
         <engine name="cordova-ios" version=">=4.1.0" />
