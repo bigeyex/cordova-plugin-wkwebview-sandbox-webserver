@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+<plugin id="cordova-plugin-wkwebview-sandbox-webserver" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CordovaWKWebviewSandboxWebserver</name>
+    <description>Cordova Wkwebview Sandbox Webserver Plugin</description>
+    <keywords>cordova,local web server,sandbox,wkwebview</keywords>
+    <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugins.git#local-webserver</repo>
+
+    <engines>
+        <engine name="cordova-ios" version=">=4.1.0" />
+    </engines>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+		    <feature name="CordovaLocalWebServer">
+			    <param name="ios-package" value="CDVWKWebviewSandboxWebServer"/>
+			    <param name="onload" value="true"/>
+		    </feature>
+            <preference name="CordovaLocalWebServerStartOnSimulator" value="true" />
+			<access origin="http://localhost" />
+      <allow-navigation href="http://localhost:*/*" />
+        </config-file>
+		
+        
+	    <header-file src="src/ios/CDVWKWebviewSandboxWebServer.h" />
+	    <source-file src="src/ios/CDVWKWebviewSandboxWebServer.m" />
+
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServer.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServerConnection.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServerFunctions.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServerHTTPStatusCodes.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServerPrivate.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServerRequest.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServerResponse.h" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServer.m" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServerConnection.m" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServerFunctions.m" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServerRequest.m" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Core/GCDWebServerResponse.m" />
+
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Requests/GCDWebServerDataRequest.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Requests/GCDWebServerFileRequest.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.h" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Requests/GCDWebServerDataRequest.m" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Requests/GCDWebServerFileRequest.m" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.m" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.m" />
+
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Responses/GCDWebServerDataResponse.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Responses/GCDWebServerErrorResponse.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Responses/GCDWebServerFileResponse.h" />
+	    <header-file src="src/ios/GCDWebServer/GCDWebServer/Responses/GCDWebServerStreamedResponse.h" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Responses/GCDWebServerDataResponse.m" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Responses/GCDWebServerErrorResponse.m" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Responses/GCDWebServerFileResponse.m" />
+	    <source-file src="src/ios/GCDWebServer/GCDWebServer/Responses/GCDWebServerStreamedResponse.m" />
+
+	    <framework src="AssetsLibrary.framework" />
+	    <framework src="MobileCoreServices.framework" />
+	    <framework src="CFNetwork.framework" />
+        <framework src="libz.dylib" />
+
+        <info>
+        This plugin utilize port 49086, at least for now.
+    </info>
+
+    </platform>
+</plugin>

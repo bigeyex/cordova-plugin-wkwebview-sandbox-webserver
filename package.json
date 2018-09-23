@@ -1,0 +1,36 @@
+{
+  "name": "cordova-plugin-wkwebview-sandbox-webserver",
+  "version": "0.1.0",
+  "description": "Cordova Wkwebview Sandbox Webserver Plugin",
+  "cordova": {
+    "id": "cordova-plugin-wkwebview-sandbox-webserver",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigeyex/cordova-plugin-wkwebview-sandbox-webserver.git"
+  },
+  "keywords": [
+    "cordova",
+    "local web server",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova-ios",
+      "version": ">=4.0.0-dev"
+    }
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bigeyex/cordova-plugin-wkwebview-sandbox-webserver/issues"
+  },
+  "homepage": "https://github.com/bigeyex/cordova-plugin-wkwebview-sandbox-webserver",
+  "dependencies": {
+    "urijs": "^1.17.1"
+  }
+}
